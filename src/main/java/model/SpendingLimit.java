@@ -3,19 +3,17 @@ package model;
 import java.time.LocalDate;
 
 public class SpendingLimit {
-    private WalletManagement walletManagement;
+
     private User user;
     private Long id;
     private LocalDate dateCreate;
     private LocalDate dateActive;
     private Double money;
     public SpendingLimit(){
-        walletManagement = new WalletManagement();
         user = new User();
     }
     public SpendingLimit(Long id, LocalDate dateCreate, LocalDate dateActive, Double money){
         this. id = id;
-        walletManagement = new WalletManagement();
         user = new User();
         this.dateCreate = dateCreate;
         this.dateActive = dateActive;
@@ -23,13 +21,6 @@ public class SpendingLimit {
 
     }
 
-    public WalletManagement getWalletManagement() {
-        return walletManagement;
-    }
-
-    public void setWalletManagement(WalletManagement walletManagement) {
-        this.walletManagement = walletManagement;
-    }
 
     public User getUser() {
         return user;
