@@ -36,6 +36,9 @@ if (action == null) {
             case "takePassword":
                 displayFormTakePassWord(request, response);
                 break;
+            case "home" :
+                displayHome(request, response);
+                break;
             default:
                 displayFormLogin(request, response);
                 break;
@@ -44,7 +47,7 @@ if (action == null) {
 
     private void displayFormLogin(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Login/login.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login/login.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -56,10 +59,15 @@ if (action == null) {
 
     private void displayFormTakePassWord(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Login/password.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login/password.jsp");
         dispatcher.forward(request, response);
     }
 
+    private void displayHome(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("home/home.jsp");
+        requestDispatcher.forward(request, response);
+    }
 }
 
 

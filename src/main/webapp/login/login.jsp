@@ -30,7 +30,9 @@
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
+                            <form method="post" action="/login?action=home">
                             <button type="submit" class="form-control btn btn-primary submit px-3" ><i class="fa-solid fa-right-to-bracket" style="margin-right: 30px; color: coral;text-align: center"></i>Sign In</button>
+                            </form>
                         </div>
                         <div class="form-group">
                             <form method="post" action="/login?action=register">
