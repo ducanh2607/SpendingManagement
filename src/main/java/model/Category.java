@@ -2,34 +2,38 @@ package model;
 
 public class Category {
     private Long id;
-    private WalletManagement walletManagement;
-    private String name;
 
+    private String name;
+    private Boolean type;
     public Category() {
-        walletManagement = new WalletManagement();
 
     }
-
-    public Category(Long id, String name) {
+    public Category(Long id, String name, Boolean type) {
         this.id = id;
         this.name = name;
-        walletManagement = new WalletManagement();
+        this.type = type;
     }
+
+    public Category(String name, Boolean type) {
+        this.name = name;
+        this.type = type;
+    }
+
+    public Boolean getType() {
+        return type;
+    }
+
+    public void setType(Boolean type) {
+        this.type = type;
+    }
+
 
     public Long getId() {
         return id;
     }
 
-    public WalletManagement getWalletManagement() {
-        return walletManagement;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setWalletManagement(WalletManagement walletManagement) {
-        this.walletManagement = walletManagement;
     }
 
     public void setName(String name) {
