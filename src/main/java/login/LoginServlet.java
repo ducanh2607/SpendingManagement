@@ -39,6 +39,9 @@ if (action == null) {
             case "home" :
                 displayHome(request, response);
                 break;
+            case "account" :
+                displayInformationAccount(request, response);
+                break;
             default:
                 displayFormLogin(request, response);
                 break;
@@ -68,6 +71,13 @@ if (action == null) {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("home/home.jsp");
         requestDispatcher.forward(request, response);
     }
+
+    private void displayInformationAccount(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("user.jsp");
+        requestDispatcher.forward(request, response);
+    }
+
 }
 
 

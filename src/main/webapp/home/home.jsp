@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="./user.html">
+                    <a class="nav-link" href="home/user.jsp">
                         <p>Account</p>
                         <%-------//////////////////// Quan ly Acc count--%>
                     </a>
@@ -394,6 +394,26 @@ textarea{
         color: white;
         margin: 15px;
 
+    }
+
+
+    .item-top{
+        padding: 10px 0px 5px 10px;
+        display: grid;
+        grid-template-columns:10% 50% 40%;
+
+    }
+    .item-title{
+        font-weight: bold;
+    }
+
+    .item-spending{
+        background-color:white;
+        width: 70%;
+        padding-left: 85px;
+        border-radius: 15px;
+        border: 5px solid;
+        border-color: #892ef1 #9c73ec #afaff1;
     }
 
 </style>
