@@ -74,7 +74,7 @@ if (action == null) {
 
     private void displayInformationAccount(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("user.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("statistical.jsp");
         requestDispatcher.forward(request, response);
     }
 
