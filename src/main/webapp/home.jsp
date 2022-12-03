@@ -33,13 +33,13 @@
             </div>
             <ul class="nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="dashboard.html">
+                    <a class="nav-link" href="home.jsp">
                         <p>Income and Expense</p>
                         <%-------////////////////////   Danh Sach Chi tieu--%>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="./user.html">
+                    <a class="nav-link" href="./user.jsp">
                         <p>Account</p>
                         <%-------//////////////////// Quan ly Acc count--%>
                     </a>
