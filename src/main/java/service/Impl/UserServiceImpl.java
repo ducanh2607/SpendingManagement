@@ -21,7 +21,9 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User findById(HttpServletRequest request) {
-        return null;
+        Long id = Long.parseLong(request.getParameter("id"));
+        return userDAO.findById(id);
+
     }
 
     @Override
@@ -37,10 +39,21 @@ public class UserServiceImpl implements IUserService {
 
     }
 
-
     @Override
     public boolean update(HttpServletRequest request) {
-        return false;
+        Long id  = Long.parseLong(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String userName = request.getParameter("username");
+        String password = request.getParameter("password");
+        return userDAO.updateUser(new User(id, name, userName, password));
+    }
+    public boolean delete(HttpServletRequest request){
+        Long id = Long.parseLong(request.getParameter("id"));
+        return userDAO.deleteById(id);
+    }
+    public boolean block(HttpServletRequest request){
+        Long id = Long.parseLong(request.getParameter("id"));
+        return userDAO.blockUser(id);
     }
 
     @Override
