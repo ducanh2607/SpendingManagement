@@ -3,8 +3,7 @@ package model;
 public class User {
     private Long id;
     private String name;
-
-    private String username;
+    private String userName;
     private String password;
     private boolean role;
     private double  wallet;
@@ -12,41 +11,24 @@ public class User {
     private boolean status;
 
     public User() {
+
     }
 
-    public User(Long id, String name, String username, String password, double wallet, boolean share, boolean status) {
+    public User(Long id, String userName, String password){
         this.id = id;
-        this.name = name;
-        this.username = username;
-        this.password = password;
-        this.wallet = wallet;
-        this.share = share;
-        this.status = status;
-    }
-
-    public User(Long id, String name, String username, String password) {
-        this.id = id;
-        this.name = name;
-        this.username = username;
-        this.password = password;
-    }
-
-    public User(String name, String username, String password){
-        this.name = name;
-//        true is admin
-        this.username = username;
-        this.password = password;
         this.role = false;
-        this.wallet = 0;
+//        true is admin
+        this.userName = userName;
+        this.password = password;
         this.share = false;
         this.status = false;
 //      true is lock
     }
-    public User(String username, String password){
+    public User(String userName, String password){
 
         this.role = false;
 //        true is admin
-        this.username = username;
+        this.userName = userName;
         this.password = password;
         this.share = false;
         this.status = false;
@@ -61,8 +43,8 @@ public class User {
         return name;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
     public String getPassword() {
@@ -89,22 +71,12 @@ public class User {
         this.name = name;
     }
 
-    public void setUserName(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public User(String name, String username, String password, boolean role, double wallet, boolean share, boolean status) {
-        this.name = name;
-        this.username = username;
-        this.password = password;
-        this.role = role;
-        this.wallet = wallet;
-        this.share = share;
-        this.status = status;
     }
 
     public void setRole(boolean role) {
