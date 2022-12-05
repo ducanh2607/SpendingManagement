@@ -91,15 +91,10 @@ Tip 2: you can also add an image using data-image tag
           </ul>
           <ul class="navbar-nav ml-auto">
             <li style="padding-top: 27px" class="nav-item">
-              <button style="background-color: #8564ca;border: none;border-radius: 10px; " type="submit"
-                      class="btn-primary">
-                <a style="color: white;font-size: 13px;padding: 10px" data-toggle="modal"
-                   data-target="#myModal">ADD TRANSACTION</a>
-              </button>
               <%----------------  ////////////////////////////// Them chi tieu--%>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#pablo"><%-----------////////////////    Dang xuat--%>
+              <a class="nav-link" href="/login?action=controller"><%-----------////////////////    Dang xuat--%>
                 <span class="no-icon">Log out</span>
               </a>
             </li>
