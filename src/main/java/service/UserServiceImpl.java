@@ -30,6 +30,7 @@ public class UserServiceImpl implements IUserService{
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
         userDAO.createUser(new User(userName,password));
+
     }
     @Override
     public void upgrade(HttpServletRequest request){
