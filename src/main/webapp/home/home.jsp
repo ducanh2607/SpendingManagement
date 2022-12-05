@@ -3,20 +3,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+          name='viewport'/>
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
     <!-- CSS Files -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/demo.css" rel="stylesheet"/>
 </head>
 <body>
 <link rel="stylesheet" href="homepage.css">
@@ -150,8 +151,14 @@
                                     <div class="tab-content tab-validate" style="margin-top:20px;">
                                         <div class="tab-pane active" id="primary">
                                             <div class="item-spending">
-                                                <p style="padding: 10px 0px 0px 10px;color: #8564ca;font-weight: bold">
-                                                    <b>Expense</b></p>
+                                                <div class="item-head">
+                                                    <p style="padding: 10px 0px 0px 10px;color: #8564ca;font-weight: bold">
+                                                        <b>Expense</b></p>
+                                                    <div class="item-btn">
+                                                    <button class="btnEdit-item" type="submit"><a>Edit</a></button>
+                                                    <button class="btnDelete-item" type="submit"><a>Delete</a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="item-top">
                                                     <i class="fa fa-arrow-up"
                                                        style="font-size:20px;color:#cc3e3e;padding: 5px 0px 0px 10px"></i>
@@ -172,8 +179,14 @@
 
                                         <div class="tab-pane" id="secondary">
                                             <div class="item-spending">
-                                                <p style="padding: 10px 0px 0px 10px;color: #8564ca;font-weight: bold">
-                                                    <b>Income</b></p>
+                                                <div class="item-head">
+                                                    <p style="padding: 10px 0px 0px 10px;color: #8564ca;font-weight: bold">
+                                                        <b>Income</b></p>
+                                                    <div class="item-btn">
+                                                    <button class="btnEdit-item" type="submit"><a>Edit</a></button>
+                                                    <button class="btnDelete-item" type="submit"><a>Delete</a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="item-top">
                                                     <i class="fa fa-arrow-down"
                                                        style="font-size:20px;color:#1e7e34;padding: 5px 0px 0px 10px"></i>
@@ -320,7 +333,7 @@
 </body>
 <!--   Core JS Files   -->
 <style>
-    body{
+    body {
         box-sizing: border-box;
         margin: auto;
     }
@@ -328,16 +341,16 @@
     @import url(https://fonts.googleapis.com/css?family=Calibri:400,300,700);
 
 
-textarea{
-    margin-left: 10px;
-    width: 220px;
-    border-color: #8564ca;
-    outline: none;
-    border-radius: 10px;
-}
+    textarea {
+        margin-left: 10px;
+        width: 220px;
+        border-color: #8564ca;
+        outline: none;
+        border-radius: 10px;
+    }
 
 
-    .card form select{
+    .card form select {
         border-radius: 10px;
         margin: 10px;
         width: 220px;
@@ -346,7 +359,7 @@ textarea{
         outline: none;
     }
 
-    .card form input{
+    .card form input {
         margin: 10px;
         width: 220px;
         height: 30px;
@@ -361,7 +374,6 @@ textarea{
             width: 90vw;
         }
     }
-
 
 
     .card-title p {
@@ -394,23 +406,46 @@ textarea{
     }
 
 
-    .item-top{
+    .item-top {
         padding: 10px 0px 5px 10px;
         display: grid;
         grid-template-columns:10% 50% 40%;
 
     }
-    .item-title{
+
+    .item-title {
         font-weight: bold;
     }
 
-    .item-spending{
-        background-color:white;
+    .item-spending {
+        background-color: white;
         width: 70%;
-        padding-left: 85px;
+        padding-left: 50px;
         border-radius: 15px;
         border: 5px solid;
         border-color: #892ef1 #9c73ec #afaff1;
+    }
+    .item-head{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .btnEdit-item{
+        height: 30px;
+        width: 50px;
+        border: none;
+        background-color: #1e7e34;
+        color: white;
+    }
+    .btnDelete-item{
+        height: 30px;
+        width: 70px;
+        border: none;
+        color: white;
+        background-color: #a22626;
+    }
+    .item-btn{
+        margin: 10px;
+        padding-left: 120px;
     }
 
 </style>

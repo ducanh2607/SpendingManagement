@@ -26,6 +26,15 @@ public class WalletManagement {
         this.notes = notes;
     }
 
+    public WalletManagement(boolean type, Double money, String notes, User user, Category category) {
+        this.date = LocalDate.now();
+        this.type = type;
+        this.money = money;
+        this.notes = notes;
+        this.user = user;
+        this.category = category;
+    }
+
     public LocalDate getDate() {
         return date;
     }
