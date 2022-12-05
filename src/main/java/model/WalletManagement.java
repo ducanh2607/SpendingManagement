@@ -12,9 +12,9 @@ public class WalletManagement {
     private User user;
     private Category category;
 
-    public WalletManagement() {
-        user = new User();
-        category = new Category();
+    public WalletManagement(Long id, Boolean type, Double money, String notes, Long user, Long category) {
+        this.user = new User();
+        this.category = new Category();
     }
     public  WalletManagement(Long id, LocalDate date, boolean type, Double money, String notes){
         this.id = id;

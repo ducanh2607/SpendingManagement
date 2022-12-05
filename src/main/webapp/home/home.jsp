@@ -93,7 +93,7 @@
                     <form>
                         <h3 style="color: #8564ca"><b>Add Transaction</b></h3>
                         <select>
-                            <option selected>Category Transaction</option>
+                            <option selected hidden>Category Transaction</option>
                             <option value="" name="">Expense</option>
                             <option value="" name="">Income</option>
                         </select>
