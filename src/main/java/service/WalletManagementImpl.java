@@ -22,6 +22,11 @@ public class WalletManagementImpl implements IWalletService{
     }
 
     @Override
+    public void upgrade(HttpServletRequest request) {
+
+    }
+
+    @Override
     public boolean edit(HttpServletRequest request) {
         return false;
     }

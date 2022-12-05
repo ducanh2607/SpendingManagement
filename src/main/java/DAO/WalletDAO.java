@@ -14,7 +14,7 @@ import java.util.List;
 public class WalletDAO {
     private final Connection connection;
     private final UserDAO userDAO;
-    private final CategoryDao categoryDao;
+    private final CategoryDAO categoryDAO;
     private final String SELECT_ALL_PRODUCTS = "select * from walletmanagement;";
     private final String SELECT_PRODUCT_BY_ID = "select * from walletmanagement where id = ?;";
     private final String INSERT_PRODUCT = "insert into walletmanagement(type, money,notes,id_category,id_user) value (?,?,?,?,?,?);";
@@ -24,7 +24,7 @@ public class WalletDAO {
     public WalletDAO() {
         connection = MyConnection.getConnection();
         userDAO = new UserDAO();
-        categoryDao = new CategoryDao();
+        categoryDAO = new CategoryDAO();
     }
 
 

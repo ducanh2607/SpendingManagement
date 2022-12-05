@@ -15,13 +15,13 @@ public class CategoryServiceImpl implements ICategoryService{
 
     @Override
     public List<Category> findAll(HttpServletRequest request) {
-        return categoryDAO.findAll();
+        return null;
     }
 
     @Override
     public Category findById(HttpServletRequest request) {
         Long id = Long.parseLong(request.getParameter("id"));
-        return categoryDAO.findCategoryById(id);
+        return null;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class CategoryServiceImpl implements ICategoryService{
         String id = request.getParameter("id");
         String name = request.getParameter("name");
         Boolean type = Boolean.valueOf(request.getParameter("type"));
-            return categoryDAO.createCategory(new Category(name, type));
+            return true;
         }
 
     @Override

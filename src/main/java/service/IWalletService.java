@@ -6,5 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 public interface IWalletService extends ICoreCRUDService<WalletManagement,Long> {
+    boolean edit(HttpServletRequest request);
+
+    boolean deleteById(HttpServletRequest request);
+
     List<WalletManagement> findByNameContaining(HttpServletRequest request);
 }
