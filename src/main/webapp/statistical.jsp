@@ -112,14 +112,75 @@ Tip 2: you can also add an image using data-image tag
 
     <!-- End Navbar -->
     <div class="content">
-
-        </div>
-
-
-
-
-
-      </div>
+      <table>
+        <tr>
+          <th></th>
+          <th>Total income</th>
+          <th>Total spending</th>
+        </tr>
+        <tr>
+          <th>January</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>February</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>March</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>April</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>May</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>June</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>July</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th> August</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>September</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>October</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>November</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>December</th>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
     </div>
     <footer class="footer">
       <div class="container-fluid">
@@ -161,6 +222,32 @@ Tip 2: you can also add an image using data-image tag
 
 -->
 </body>
+<style>
+  table {
+    border: 1px solid;
+    width: 80%;
+    border-color: #8564ca;
+    border-radius: 10px;
+  }
+  tr {
+    border: 1px solid;
+    border-color: #8564ca;
+    border-radius: 10px;
+  }
+
+  td {
+    border: 1px solid;
+    border-color: #8564ca;
+    border-radius: 10px;
+  }
+
+  th {
+    border: 1px solid;
+    border-color: #8564ca;
+    text-align: center;
+    border-radius: 10px;
+  }
+</style>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
 <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>

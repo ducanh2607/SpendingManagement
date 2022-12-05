@@ -16,7 +16,7 @@
 <script>
 
 </script>
-<form name="form" method="get">
+<form action="/login?action=create" method="post">
     <link rel="stylesheet" href="css/style.css">
     <section class="ftco-section">
         <div class="container">
@@ -30,17 +30,15 @@
                     <div class="login-wrap p-0">
                         <h3 class="mb-4 text-center">Have an account?</h3>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" required>
+                            <input type="text" class="form-control" placeholder="Username" name="username" id="username" required>
                         </div>
                         <div class="form-group">
-                            <input id="password-field" type="password" class="form-control" placeholder="Password"
+                            <input id="password-field" type="password" class="form-control" placeholder="Password" name="password"
                                    required>
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
-                            <form method="post">
                                 <button type="submit" class="form-control btn btn-primary submit px-3">Accept</button>
-                            </form>
                         </div>
                         <a href="/login?action=login"><span>Back to home</span></a>
                         <div class="form-group d-md-flex">
