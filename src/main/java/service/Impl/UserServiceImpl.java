@@ -32,6 +32,11 @@ public class UserServiceImpl implements IUserService {
         return userDAO.createUser(new User(name, username, password));
     }
 
+    @Override
+    public void upgrade(HttpServletRequest request) {
+
+    }
+
 
     @Override
     public boolean update(HttpServletRequest request) {

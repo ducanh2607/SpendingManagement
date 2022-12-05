@@ -36,7 +36,7 @@ public class UserDAO {
     public boolean createUser(User user) {
         try (PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER)) {
             preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getUsername());
+            preparedStatement.setString(2, user.getUserName());
             preparedStatement.setString(3, user.getPassword());
             return preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
