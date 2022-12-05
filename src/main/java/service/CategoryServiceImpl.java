@@ -25,14 +25,12 @@ public class CategoryServiceImpl implements ICategoryService{
     }
 
     @Override
-    public void add(HttpServletRequest request) {
+    public boolean add(HttpServletRequest request) {
         String id = request.getParameter("id");
         String name = request.getParameter("name");
         Boolean type = Boolean.valueOf(request.getParameter("type"));
-        if (id == null){
-            categoryDAO.createCategory(new Category(name, type));
+            return categoryDAO.createCategory(new Category(name, type));
         }
-    }
 
     @Override
     public void upgrade(HttpServletRequest request) {

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 
 public class MyConnection {
-    private static String jdbcURL="jdbc:mysql://localhost:3306/spendingManagement?useSSL=false";
+    private static String jdbcURL="jdbc:mysql://localhost:3306/spendingmanagement?allowPublicKeyRetrieval=true&useSSL=false";
     private static String username = "root";
     private static String password = "123456";
     private static Connection connection;
@@ -14,10 +14,9 @@ public class MyConnection {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(jdbcURL, username, password);
-        }catch (SQLException | ClassNotFoundException e){
+        } catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
         return connection;
     }
-
 }
