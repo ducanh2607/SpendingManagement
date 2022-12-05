@@ -24,17 +24,20 @@ public class User {
         this.status = false;
 //      true is lock
     }
-    public User(Long id, String name, String userName, String password){
-        this.id = id;
+
+    public User(String name, String userName, String password) {
         this.name = name;
-        this.role = false;
-//        true is admin
         this.userName = userName;
         this.password = password;
-        this.share = false;
-        this.status = false;
-//      true is lock
     }
+
+    public User(Long id, String name, String userName, String password) {
+        this.id = id;
+        this.name = name;
+        this.userName = userName;
+        this.password = password;
+    }
+
     public User(String userName, String password){
 
         this.role = false;

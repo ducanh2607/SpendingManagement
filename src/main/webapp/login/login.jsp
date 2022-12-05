@@ -35,10 +35,9 @@
                             </form>
                         </div>
                         <div class="form-group">
-                            <form method="post" action="/login?action=register">
-
+                            <a href="login/create.jsp">
                                 <button type="submit" class="form-control btn btn-primary submit px-3"><i class="fa-solid fa-pen-to-square" style="color: coral; margin-right: 20px"></i>Register</button>
-                            </form>
+                            </a>
                         </div>
                         <div class="form-group d-md-flex">
                             <div class="w-50">

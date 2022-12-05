@@ -1,4 +1,6 @@
-package login;
+package controller;
+
+import service.Impl.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -6,10 +8,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
+
+    private UserServiceImpl userService;
+
+    public void init() {
+        userService = new UserServiceImpl();
+    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 String action = request.getParameter("action");
@@ -30,11 +39,11 @@ if (action == null) {
             action ="";
 
         }switch (action) {
+            case "create":
+                create(request, response);
+                break;
             case "register":
                 displayFormRegister(request, response);
-                break;
-            case "takePassword":
-                displayFormTakePassWord(request, response);
                 break;
             case "home" :
                 displayHome(request, response);
@@ -60,11 +69,6 @@ if (action == null) {
         dispatcher.forward(request, response);
     }
 
-    private void displayFormTakePassWord(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("login/password.jsp");
-        dispatcher.forward(request, response);
-    }
 
     private void displayHome(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -78,6 +82,14 @@ if (action == null) {
         requestDispatcher.forward(request, response);
     }
 
+    private void create(HttpServletRequest request, HttpServletResponse response)
+        throws IOException {
+        if (userService.add(request)) {
+            HttpSession session = request.getSession();
+            session.setAttribute("message", "Create successfully");
+        }
+        response.sendRedirect("http://localhost:8080/login");
+    }
 }
 
 

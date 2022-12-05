@@ -8,7 +8,7 @@ public interface ICoreCRUDService<E, K> {
 
     E findById(HttpServletRequest request);
 
-    void add(HttpServletRequest request);
+    boolean add(HttpServletRequest request);
     void upgrade(HttpServletRequest request);
 
 }
